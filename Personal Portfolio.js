@@ -41,47 +41,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Optional: Form Submission Alert ---
+    // --- Form Submission Logic (FormSubmit) ---
     const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
+    const formStatus = document.getElementById('form-status');
+
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        // In a real application, you would hook this up to a backend service like Formspree or an email API.
-        alert('Thank you for your message! This form is currently visually complete. Backend integration is required to send emails.');
-        contactForm.reset();
-    });
-});
+        
+        const submitBtn = contactForm.querySelector('button');
+        submitBtn.innerText = "Sending...";
+        submitBtn.disabled = true;
 
-const contactForm = document.getElementById('contactForm');
-const formStatus = document.getElementById('form-status');
+        const formData = new FormData(contactForm);
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const submitBtn = contactForm.querySelector('button');
-    submitBtn.innerText = "Sending...";
-    submitBtn.disabled = true;
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-    const formData = new FormData(contactForm);
-
-    try {
-        const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
+            if (response.ok) {
+                formStatus.innerHTML = "<p style='color: #22c55e; margin-top: 1rem;'>Success! Your message has been sent.</p>";
+                contactForm.reset();
+            } else {
+                formStatus.innerHTML = "<p style='color: #ef4444; margin-top: 1rem;'>Oops! Something went wrong. Please try again.</p>";
             }
-        });
-
-        if (response.ok) {
-            formStatus.innerHTML = "<p style='color: #22c55e; margin-top: 1rem;'>Success! Your message has been sent.</p>";
-            contactForm.reset();
-        } else {
-            formStatus.innerHTML = "<p style='color: #ef4444; margin-top: 1rem;'>Oops! Something went wrong. Please try again.</p>";
+        } catch (error) {
+            formStatus.innerHTML = "<p style='color: #ef4444; margin-top: 1rem;'>Error connecting to the server.</p>";
+        } finally {
+            submitBtn.innerText = "Send Message";
+            submitBtn.disabled = false;
         }
-    } catch (error) {
-        formStatus.innerHTML = "<p style='color: #ef4444; margin-top: 1rem;'>Error connecting to the server.</p>";
-    } finally {
-        submitBtn.innerText = "Send Message";
-        submitBtn.disabled = false;
-    }
+    });
 });
