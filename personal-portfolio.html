@@ -146,29 +146,35 @@
                 <p><i class="fas fa-phone"></i> +60 16-220 3462</p>
             </div>
             <div class="contact-form-block">
-                <form id="contactForm">
+                <form id="contactForm" action="https://formsubmit.co/chongshengtimothy@gmail.com" method="POST">
+                    <!-- Hidden Configuration Fields for FormSubmit -->
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://your-vercel-url.com/thanks.html"> // Replace with your actual Vercel URL for the thank you page
+
                     <div class="form-group">
                         <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        <input type="text" name="name" id="fullName" placeholder="Enter your full name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
                     </div>
                     <div class="form-group">
                         <label for="mobile">Mobile Number</label>
-                        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number">
+                        <input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile number">
                     </div>
                     <div class="form-group">
                         <label for="subject">Email Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                        <input type="text" name="_subject" id="subject" placeholder="Enter the subject" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Email Content</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea>
                     </div>
                     <button type="submit" class="btn primary btn-block">Send Message</button>
                 </form>
+                <div id="form-status"></div>
             </div>
         </div>
     </section>
