@@ -50,3 +50,38 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.reset();
     });
 });
+
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = contactForm.querySelector('button');
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    const formData = new FormData(contactForm);
+
+    try {
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            formStatus.innerHTML = "<p style='color: #22c55e; margin-top: 1rem;'>Success! Your message has been sent.</p>";
+            contactForm.reset();
+        } else {
+            formStatus.innerHTML = "<p style='color: #ef4444; margin-top: 1rem;'>Oops! Something went wrong. Please try again.</p>";
+        }
+    } catch (error) {
+        formStatus.innerHTML = "<p style='color: #ef4444; margin-top: 1rem;'>Error connecting to the server.</p>";
+    } finally {
+        submitBtn.innerText = "Send Message";
+        submitBtn.disabled = false;
+    }
+});
