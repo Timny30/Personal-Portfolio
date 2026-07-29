@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timothy Ng Chong Sheng - AI & Full-Stack Developer</title>
+    <title>Timothy Ng Chong Sheng - Portfolio</title>
     <link rel="stylesheet" href="Personal_Portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-content">
-            <div class="logo">Timothy Ng</div>
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i> Timothy Ng
+            </div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><i class="far fa-user"></i> About</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="#skills"><i class="fas fa-layer-group"></i> Skills & Tools</a></li>
+                <li><a href="#achievements"><i class="fas fa-medal"></i> Achievements</a></li>
+                <li><a href="#contact"><i class="far fa-envelope"></i> Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <div class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon" id="theme-icon"></i>
+                    <i class="fas fa-sun" id="theme-icon"></i>
                 </div>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
@@ -31,207 +34,438 @@
         </div>
     </nav>
 
-    <!-- Profile Showcase Section -->
-    <header id="hero">
+    <!-- Hero Section -->
+    <header id="hero" class="section-padding">
         <div class="hero-container">
             <div class="hero-text">
-                <h1>Timothy Ng Chong Sheng</h1>
-                <h2>Artificial Intelligence Intern Candidate | AI & Full-Stack Developer</h2>
-                <p>Bridging Artificial Intelligence with robust Software Engineering. I build scalable web applications, automate complex workflows, and design intelligent systems. Currently seeking a software development internship to transform technical challenges into seamless digital solutions.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn primary">View My Work</a>
-                    <a href="#contact" class="btn secondary">Get In Touch</a>
+                <div class="status-badge">
+                    <span class="dot"></span> Actively seeking Software Engineering Internships
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/Timny30" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/timothy-ng-4201aa345" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <h1>Hi, I'm <span class="gradient-text">Timothy Ng Chong Sheng</span></h1>
+                <h2 class="subtitle"><i class="fas fa-graduation-cap"></i> AI Computer Science Student & Full-Stack Developer</h2>
+                
+                <div class="info-card">
+                    <span class="info-item">Asia Pacific University (APU)</span>
+                    <span class="divider">•</span>
+                    <span class="info-item">B.Sc. (Hons) AI</span>
+                    <span class="divider">•</span>
+                    <span class="info-item"><i class="fas fa-map-marker-alt"></i> Puchong, Selangor</span>
+                    <br>
+                    <span class="info-highlight"><i class="fas fa-award"></i> Diploma CGPA: 3.84 / 4.00</span>
+                </div>
+
+                <p class="hero-desc">
+                    Bridging Artificial Intelligence with robust Software Engineering. I build scalable web applications, automate complex workflows, and design intelligent systems. Passionate about full-stack development, LLM integrations, and process automation.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn primary"><i class="far fa-envelope"></i> Get In Touch</a>
+                    <a href="#" class="btn secondary"><i class="far fa-file-alt"></i> View Resume</a>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <h3>Degree</h3>
+                        <p>AI Undergraduate</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>5+</h3>
+                        <p>Core Projects</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3 class="highlight-text">3.84 CGPA</h3>
+                        <p>Diploma in SE</p>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/_DSC0010.jpg" alt="Timothy Ng Chong Sheng Profile Picture" id="profile-pic">
+            
+            <div class="hero-visual">
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/400x400" alt="Timothy Ng" class="profile-img">
+                    <div class="profile-floating-badge">
+                        <div class="badge-icon">TN</div>
+                        <div class="badge-text">
+                            <strong>Expected Grad: 2028</strong>
+                            <span>Computer Science (AI)</span>
+                        </div>
+                    </div>
+                    <div class="profile-footer">
+                        <span><i class="fas fa-check-circle"></i> Identity Verified</span>
+                        <span>timmycs22@gmail.com</span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="bg-light">
-        <h2>About Me</h2>
-        <div class="about-content">
-             <p>I am a dedicated Computer Science student specializing in Artificial Intelligence at Asia Pacific University (APU), backed by a solid 
-                foundational Diploma in Software Engineering. I specialize in closing the gap between backend logic, intelligent algorithms, 
-                and user-centric frontend design. My technical background spans full-stack development, system architecture, and relational database
-                 management. Beyond writing clean code, my core strengths lie in analytical problem-solving, seamless team communication, and an 
-                 agile adaptability to new technologies. I am actively seeking a software engineering internship to contribute to impactful 
-                 projects while continuing to grow as a full-stack developer.</p>
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-briefcase"></i> CAREER & ACADEMIC GROWTH</span>
+            <h2>Work Experience & Growth</h2>
+            <p>Hands-on software development internships and academic milestones.</p>
+            
+            <div class="filter-group" id="exp-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="internship">Internship</button>
+                <button class="filter-btn" data-filter="academic">Academic</button>
+            </div>
         </div>
-    </section>
 
-    <!-- Technical Skills Section -->
-    <section id="skills">
-        <h2>Technical Arsenal</h2>
-        <div class="skills-grid">
-            <div class="skills-card">
-                <h3><i class="fas fa-code"></i> Languages</h3>
-                <ul class="clean-list">
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>JavaScript</li>
-                    <li>HTML5 / CSS3</li>
-                    <li>PHP</li>
-                    <li>R</li>
-                </ul>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item" data-category="internship">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="card-tag internship">INTERNSHIP</span>
+                    <h3>WSG Delivery Intern (Software Engineer)</h3>
+                    <p class="organization"><i class="far fa-building"></i> PointStar Malaysia</p>
+                    <p class="date"><i class="far fa-calendar-alt"></i> Sept 2025 – Nov 2025</p>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> On-Site <span class="status-dot"></span></p>
+                    
+                    <ul class="task-list">
+                        <li>Architected the "Gemini Model Version Tracker," an automated full-stack system using Google AppSheet to monitor AI lifecycles.</li>
+                        <li>Engineered custom Google Apps Script algorithms for real-time web scraping of official documentation.</li>
+                        <li>Designed a relational database schema and implemented a Webhook notification engine for Google Chat.</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span>Google Apps Script</span><span>AppSheet</span><span>Webhooks</span><span>GCP</span>
+                    </div>
+                </div>
             </div>
-            <div class="skills-card">
-                <h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
-                <ul class="clean-list">
-                    <li>Git & Version Control</li>
-                    <li>Relational Databases (MySQL)</li>
-                    <li>Linux Servers (Rocky Linux, Ubuntu)</li>
-                    <li>LLM Integrations (Botpress, Gemini)</li>
-                    <li>Google Cloud Platform (GCP)</li>
-                </ul>
-            </div>
-            <div class="skills-card">
-                <h3><i class="fas fa-brain"></i> Core Concepts</h3>
-                <ul class="clean-list">
-                    <li>Full-Stack Web Development</li>
-                    <li>System Architecture & Design</li>
-                    <li>Database Management</li>
-                    <li>Process Automation</li>
-                    <li>UI/UX Wireframing</li>
-                </ul>
+
+            <div class="timeline-item right" data-category="academic">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="card-tag academic">ACADEMIC</span>
+                    <h3>Bachelor of Computer Science (Hons) (AI)</h3>
+                    <p class="organization"><i class="fas fa-university"></i> Asia Pacific University (APU)</p>
+                    <p class="date"><i class="far fa-calendar-alt"></i> Feb 2026 – Present</p>
+                    
+                    <ul class="task-list">
+                        <li>Focusing on advanced artificial intelligence modules, combinatorial optimization algorithms, and machine learning.</li>
+                        <li>Collaborating on complex system blueprint designs (e.g., AWS technical systems) and hackathons.</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span>AI Algorithms</span><span>Optimization</span><span>Cloud Architecture</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-light">
-        <h2>Featured Projects</h2>
+    <section id="projects" class="section-padding">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-code"></i> ACADEMIC & INDEPENDENT PORTFOLIO</span>
+            <h2>Featured Projects & Code</h2>
+            <p>Practical software built for university coursework, hackathons, and personal skill refinement.</p>
+            
+            <div class="filter-group" id="proj-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="ai">AI / Machine Learning</button>
+                <button class="filter-btn" data-filter="academic">Academic</button>
+            </div>
+        </div>
+
         <div class="project-grid">
-            <div class="project-card">
-                <h3>AI-Powered Property Rental Assistant</h3>
-                <p class="tech-stack">Botpress | LLMs | Miro | Draw.io</p>
-                <p>A natural language conversational agent designed to streamline rental property searches in Bukit Jalil by intelligently filtering user preferences.</p>
-                <div class="project-highlights">
-                    <h4>Key Features:</h4>
-                    <p>Elimination-based search logic, step-by-step NLP refinement based on user feedback, and an integrated real estate knowledge base.</p>
-                    <h4>What I Learned:</h4>
-                    <p>Mastered prompt engineering and conversational UI design while overcoming complex NLP filtering challenges within an agile, 5-member development team.</p>
+            <!-- Project 1 -->
+            <div class="project-card" data-category="ai fullstack">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/600x300" alt="Rental Assistant">
+                    <div class="project-badges">
+                        <span class="badge academic">Personal</span>
+                        <span class="badge course"><i class="fas fa-robot"></i> AI</span>
+                        <span class="badge featured"><i class="fas fa-star"></i> Featured</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>AI-Powered Property Rental Assistant</h3>
+                    <p class="proj-desc">A natural language conversational agent designed to streamline rental property searches in Bukit Jalil.</p>
+                    <div class="proj-details">
+                        <p><i class="far fa-check-circle"></i> Elimination-based NLP filtering logic.</p>
+                        <p><i class="far fa-check-circle"></i> Integrated real estate knowledge base mapping.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span>Botpress</span><span>LLMs</span><span>NLP</span><span>Prompt Engineering</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="view-link">View Details & Features <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>IQ-Based Cognitive Assessment Platform</h3>
-                <p class="tech-stack">HTML | CSS | JavaScript | PHP | MariaDB</p>
-                <p>A responsive, full-stack web application that tests cognitive abilities and provides personalized, real-time performance analytics.</p>
-                 <div class="project-highlights">
-                    <h4>Key Features:</h4>
-                    <p>Secure user profile management, dynamic statistical dashboards, and seamless cross-browser compatibility.</p>
-                    <h4>What I Learned:</h4>
-                    <p>Strengthened my backend logic skills in PHP and relational database design, while translating wireframes into a responsive frontend interface.</p>
+            <!-- Project 2 -->
+            <div class="project-card" data-category="fullstack academic">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/600x300" alt="Tour Management">
+                    <div class="project-badges">
+                        <span class="badge academic">Academic</span>
+                        <span class="badge course"><i class="fas fa-book"></i> Info Systems</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Enterprise Linux Server Infrastructure</h3>
-                <p class="tech-stack">Rocky Linux | Ubuntu | Apache | Postfix | BIND DNS</p>
-                <p>A robust, secure server architecture built to handle enterprise-level web hosting and internal communications.</p>
-                 <div class="project-highlights">
-                    <h4>Key Features:</h4>
-                    <p>Configured FQDN resolution, enforced strict SSL/TLS encryption protocols, and deployed a scalable client-server architecture.</p>
-                    <h4>What I Learned:</h4>
-                    <p>Gained hands-on expertise in network troubleshooting, autonomous system diagnostics, and low-level server security protocols.</p>
+                <div class="project-info">
+                    <h3>Take of World Tour Management System</h3>
+                    <p class="proj-desc">A web-based platform engineered for comprehensive tour booking and management.</p>
+                    <div class="proj-details">
+                        <p><i class="far fa-check-circle"></i> Designed system architecture and data flow diagrams.</p>
+                        <p><i class="far fa-check-circle"></i> Implemented full case study requirements into a functional interface.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span>Web Dev</span><span>System Architecture</span><span>UI/UX</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="view-link">View Details & Features <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience & Education Timeline -->
-    <section id="experience">
-        <h2>Experience & Education</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content edu-block">
-                    <h3>Bachelor of Computer Science (Hons) (Artificial Intelligence)</h3>
-                    <h4>Asia Pacific University of Technology and Innovation (APU) | Feb 2026 - Present</h4>
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-brain"></i> TECHNICAL CAPABILITY MATRIX</span>
+            <h2>Skills, Stack & Development Tools</h2>
+            <p>Core tech competencies developed through degree coursework, labs, and personal software builds.</p>
+            
+            <div class="filter-group" id="skill-filters">
+                <button class="filter-btn active" data-filter="all">All Categories</button>
+                <button class="filter-btn" data-filter="programming">Programming</button>
+                <button class="filter-btn" data-filter="tools">Tools & Frameworks</button>
+            </div>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-category" data-category="programming">
+                <div class="category-header">
+                    <i class="fas fa-code"></i>
+                    <div>
+                        <h3>Programming Languages</h3>
+                        <p>Core languages taught in degree curriculum & self-taught.</p>
+                    </div>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python <span class="core-tag"><i class="fas fa-star"></i> Core Stack</span></span>
+                            <span>Advanced (90%)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Java <span class="core-tag"><i class="fas fa-star"></i> Core Stack</span></span>
+                            <span>Advanced (85%)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript / HTML / CSS</span>
+                            <span>Master (95%)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>R (Data Analysis)</span>
+                            <span>Intermediate (75%)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>WSG Delivery Intern</h3>
-                    <h4>PointStar Malaysia | Sept 2025 - Nov 2025</h4>
-                    <ul>
-                        <li>Architected the "Gemini Model Version Tracker," an automated full-stack, low-code system (Google AppSheet) to monitor Google Gemini and Vertex AI lifecycles.</li>
-                        <li>Engineered custom Google Apps Script algorithms for real-time web scraping of official Google documentation.</li>
-                        <li>Designed a relational database schema for audit trails and implemented a logic-based Webhook notification engine for Google Chat.</li>
-                    </ul>
+            <div class="skill-category" data-category="tools">
+                <div class="category-header">
+                    <i class="fas fa-microchip"></i>
+                    <div>
+                        <h3>Frameworks & Tools</h3>
+                        <p>Modern environments, databases, and version control.</p>
+                    </div>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Git & GitHub <span class="core-tag"><i class="fas fa-star"></i> Core Stack</span></span>
+                            <span>Advanced (90%)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>MySQL / Relational DBs</span>
+                            <span>Advanced (85%)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Docker & Linux (Ubuntu/Rocky)</span>
+                            <span>Intermediate (75%)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Botpress & LLM Integration</span>
+                            <span>Intermediate (80%)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-padding">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-award"></i> RECOGNITION & DISTINCTION</span>
+            <h2>Honors, Hackathons & Credentials</h2>
+            <p>Academic placements, hackathon competitions, and achievements.</p>
+        </div>
+
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="ach-header">
+                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="ach-meta">
+                        <span class="type hackathon">Hackathon</span>
+                        <span class="date"><i class="far fa-calendar"></i> Apr 2025</span>
+                    </div>
+                </div>
+                <h3>Hack Attack 2025 Participant</h3>
+                <p>Co-developed a Talent Acquisition System under rapid development conditions, collaborating with teammate Narish.</p>
+                <div class="ach-footer">
+                    <span class="highlight-badge"><i class="fas fa-rocket"></i> USM & UTAR</span>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content edu-block">
-                    <h3>Diploma in ICT (Software Engineering)</h3>
-                    <h4>Asia Pacific University of Technology and Innovation (APU) | Aug 2023 - Nov 2025</h4>
-                    <ul>
-                        <li>CGPA Achieved: 3.84</li>
-                    </ul>
+            <div class="achievement-card">
+                <div class="ach-header">
+                    <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="ach-meta">
+                        <span class="type academic">Academic</span>
+                        <span class="date"><i class="far fa-calendar"></i> Nov 2025</span>
+                    </div>
+                </div>
+                <h3>Diploma High Achiever</h3>
+                <p>Graduated with a Diploma in Information & Communication Technology (Software Engineering) with a stellar CGPA.</p>
+                <div class="ach-footer">
+                    <span class="highlight-badge"><i class="fas fa-star"></i> 3.84 / 4.00 CGPA</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-light">
-        <h2>Let's Connect</h2>
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light); max-width: 600px; margin-left: auto; margin-right: auto;">
-            Whether you have an internship opportunity, a project idea, or just want to talk about software engineering, feel free to drop me a message. I'll get back to you as soon as possible.
-        </p>
-        <div class="contact-wrapper">
-            <div class="contact-info-block">
-                <h3>Contact Details</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Puchong, Selangor</p>
-                <p><i class="fas fa-envelope"></i> timmycs22@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +60 16-220 3462</p>
-            </div>
-            <div class="contact-form-block">
-                <form id="contactForm" action="https://formsubmit.co/chongshengtimothy@gmail.com" method="POST">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://your-vercel-url.com/thanks.html"> 
+    <section id="contact" class="section-padding">
+        <div class="section-header text-center">
+            <span class="section-tag"><i class="far fa-envelope"></i> LET'S CONNECT</span>
+            <h2>Get In Touch</h2>
+            <p>Looking for a motivated Software Engineer intern, or want to collaborate on a project? Send a message!</p>
+        </div>
 
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" name="name" id="fullName" placeholder="Enter your full name" required>
+        <div class="contact-container">
+            <div class="contact-info-panel">
+                <h3>Contact Information</h3>
+                <p class="contact-desc">I respond quickly to emails and LinkedIn messages regarding internship opportunities, academic research, and technical project collaborations.</p>
+                
+                <div class="copy-box">
+                    <div class="box-icon"><i class="far fa-envelope"></i></div>
+                    <div class="box-text">
+                        <span>EMAIL ADDRESS</span>
+                        <strong id="email-text">timmycs22@gmail.com</strong>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    <button class="copy-btn" id="copy-email-btn" title="Copy to clipboard"><i class="far fa-copy"></i></button>
+                </div>
+
+                <div class="info-row">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span>BASE LOCATION</span>
+                        <strong>Puchong, Selangor</strong>
                     </div>
-                    <div class="form-group">
-                        <label for="mobile">Mobile Number</label>
-                        <input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile number">
+                </div>
+                <div class="info-row">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <span>PHONE NUMBER</span>
+                        <strong>+60 16-220 3462</strong>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Email Subject</label>
-                        <input type="text" name="_subject" id="subject" placeholder="Enter the subject" required>
+                </div>
+
+                <div class="social-links-box">
+                    <span>DEVELOPER LINKS</span>
+                    <div class="social-buttons">
+                        <a href="https://github.com/Timny30" target="_blank" class="social-btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/timothy-ng-4201aa345" target="_blank" class="social-btn linkedin">LinkedIn</a>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Email Content</label>
-                        <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+            </div>
+
+            <div class="contact-form-panel">
+                <h3>Send Me a Message</h3>
+                <p>Fill out the form below and it will log straight to my portfolio inbox.</p>
+                
+                <form id="contactForm" action="https://formsubmit.co/timmycs22@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>YOUR NAME *</label>
+                            <input type="text" name="name" placeholder="e.g. Sarah Jenkins" required>
+                        </div>
+                        <div class="form-group">
+                            <label>YOUR EMAIL *</label>
+                            <input type="email" name="email" placeholder="e.g. sarah@example.com" required>
+                        </div>
                     </div>
-                    <button type="submit" class="btn primary btn-block">Send Message</button>
+                    
+                    <div class="form-group">
+                        <label>SUBJECT</label>
+                        <input type="text" name="_subject" placeholder="e.g. Internship Inquiry / Project Collaboration" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>MESSAGE *</label>
+                        <textarea name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn"><i class="far fa-paper-plane"></i> Send Message</button>
+                    <div id="form-status"></div>
                 </form>
-                <div id="form-status"></div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Timothy Ng Chong Sheng. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3 class="footer-logo"><i class="fas fa-graduation-cap"></i> Timothy Ng Chong Sheng</h3>
+                <p>B.Sc. (Hons) Computer Science (AI) • Asia Pacific University</p>
+            </div>
+            <div class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills & Tools</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="scroll-top">
+                <a href="#hero"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Timothy Ng Chong Sheng. Built for academic showcase & career development.</p>
+            <p>Designed with <i class="fas fa-heart" style="color: #ef4444;"></i> for Computer Science & Software Engineering growth.</p>
+        </div>
     </footer>
 
     <script src="Personal_Portfolio.js"></script>
