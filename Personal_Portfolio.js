@@ -70,10 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize all filters
+    // Initialize all filters
     setupFilter('exp-filters', '.timeline-item');
     setupFilter('proj-filters', '.project-card');
     setupFilter('skill-filters', '.skill-category');
-    // If achievements had categories, you'd add: setupFilter('ach-filters', '.achievement-card');
+    setupFilter('ach-filters', '.achievement-card');
 
     // --- Copy Email to Clipboard ---
     const copyBtn = document.getElementById('copy-email-btn');
