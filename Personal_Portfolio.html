@@ -79,7 +79,7 @@
             
             <div class="hero-visual">
                 <div class="profile-card">
-                    <img src="images/_DSC0010.jpg" alt="Timothy Ng" class="profile-img">
+                    <img src="Files/_DSC0010.jpg" alt="Timothy Ng" class="profile-img">
                     <div class="profile-floating-badge">
                         <div class="badge-icon">TN</div>
                         <div class="badge-text">
@@ -372,112 +372,143 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="section-padding">
-        <div class="section-header">
-            <span class="section-tag"><i class="fas fa-award"></i> RECOGNITION & DISTINCTION</span>
-            <h2>Honors, Hackathons & Credentials</h2>
-            <p>Academic placements, hackathon competitions, and achievements.</p>
+<section id="achievements" class="section-padding">
+    <div class="section-header">
+        <span class="section-tag"><i class="fas fa-award"></i> RECOGNITION & DISTINCTION</span>
+        <h2>Honors, Hackathons & Credentials</h2>
+        <p>Academic Dean's List placements, hackathon competitions, and industry certifications.</p>
+        
+        <!-- Filter Options -->
+        <div class="filter-group" id="ach-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+            <button class="filter-btn" data-filter="academic">Academic</button>
+            <button class="filter-btn" data-filter="certification">Certification</button>
+            <button class="filter-btn" data-filter="award">Award</button>
+        </div>
+    </div>
+
+    <div class="achievements-grid">
+        <!-- Cendekiawan -->
+        <div class="achievement-card" data-category="hackathon">
+            <div class="ach-header">
+                <div class="ach-title-group">
+                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="ach-meta">
+                        <span class="ach-org">AMAZON WEB SERVICES</span>
+                        <span class="ach-type hackathon">Hackathon</span>
+                    </div>
+                </div>
+                <div class="ach-date"><i class="far fa-calendar"></i> May 2026</div>
+            </div>
+            <h3>AWS Cendekiawan 2026 Finalist</h3>
+            <p>Built 'Anti Scam Malaysia', an AI-powered scam analyzer and simulation chatbot in 24 hours.</p>
+            <div class="ach-footer">
+                <span class="highlight-badge"><i class="fas fa-rocket"></i> Top 20 teams</span>
+                <a href="Files/AWS_Cendekiawan_2026_Certificate.pdf" class="verify-link">Verify Certificate <i class="fas fa-external-link-alt"></i></a>
+            </div>
         </div>
 
-        <div class="achievements-grid">
-          <!-- Cendekiawan -->
-            <div class="achievement-card">
-                <div class="ach-header">
-                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+        <!-- Red Hat 2 -->
+        <div class="achievement-card" data-category="certification">
+            <div class="ach-header">
+                <div class="ach-title-group">
+                    <div class="ach-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="ach-meta">
-                        <span class="type hackathon">AMAZON WEB SERVICES</span>
-                        <span class="date"><i class="far fa-calendar"></i> May 2026</span>
+                        <span class="ach-org">RED HAT</span>
+                        <span class="ach-type certification">Certification</span>
                     </div>
                 </div>
-                <h3>AWS Cendekiawan 2026 Finalist</h3>
-                <p>Built 'Anti Scam Malaysia', an AI-powered scam analyzer and simulation chatbot in 24 hours. </p>
-                <div class="ach-footer">
-                    <span class="highlight-badge"><i class="fas fa-rocket"></i> Asia Pasific University</span>
-                </div>
+                <div class="ach-date"><i class="far fa-calendar"></i> Jul 2026</div>
             </div>
-            <!-- Red Hat 2 -->
-            <div class="achievement-card">
-                <div class="ach-header">
-                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="ach-meta">
-                        <span class="type hackathon">Red Hat</span>
-                        <span class="date"><i class="far fa-calendar"></i> Jul 2026</span>
-                    </div>
-                </div>
-                <h3>Red Hat System Administration II (RH134 - RHA) - Ver. 10</h3>
-                <p> Validates advanced enterprise Linux system administration skills by focusing on automated task management, storage configuration, and core security implementations using Red Hat Enterprise Linux 10.</p>
-                <div class="ach-footer">
-                    <span class="highlight-badge"><i class="fas fa-rocket"></i> Asia Pasific University</span>
-                </div>
+            <h3>Red Hat System Administration II (RH134 - RHA) - Ver. 10</h3>
+            <p>Validates advanced enterprise Linux system administration skills by focusing on automated task management, storage configuration, and core security implementations using Red Hat Enterprise Linux 10.</p>
+            <div class="ach-footer">
+                <span class="highlight-badge"><i class="fas fa-check-circle"></i> Certified</span>
+                <a href="Files/RedHat II.pdf" class="verify-link">Verify Certificate <i class="fas fa-external-link-alt"></i></a>
             </div>
+        </div>
 
-            <!-- Red Hat 1 -->
-            <div class="achievement-card">
-                <div class="ach-header">
-                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+        <!-- Red Hat 1 -->
+        <div class="achievement-card" data-category="certification">
+            <div class="ach-header">
+                <div class="ach-title-group">
+                    <div class="ach-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="ach-meta">
-                        <span class="type hackathon">Red Hat</span>
-                        <span class="date"><i class="far fa-calendar"></i> Jun 2026</span>
+                        <span class="ach-org">RED HAT</span>
+                        <span class="ach-type certification">Certification</span>
                     </div>
                 </div>
-                <h3>Red Hat System Administration I (RH124 - RHA) - Ver. 10</h3>
-                <p> Incredable experience on configuring local environments and managing DNS, DHCP, and email server.</p>
-                <div class="ach-footer">
-                    <span class="highlight-badge"><i class="fas fa-rocket"></i> Asia Pasific University</span>
-                </div>
+                <div class="ach-date"><i class="far fa-calendar"></i> Jun 2026</div>
             </div>
+            <h3>Red Hat System Administration I (RH124 - RHA) - Ver. 10</h3>
+            <p>Incredible experience on configuring local environments and managing DNS, DHCP, and email server.</p>
+            <div class="ach-footer">
+                <span class="highlight-badge"><i class="fas fa-check-circle"></i> Certified</span>
+                <a href="Files/Red Hat I.pdf" class="verify-link">Verify Certificate <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
 
-            <!-- AI Practitioner -->
-            <div class="achievement-card">
-                <div class="ach-header">
-                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+        <!-- AI Practitioner -->
+        <div class="achievement-card" data-category="certification">
+            <div class="ach-header">
+                <div class="ach-title-group">
+                    <div class="ach-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="ach-meta">
-                        <span class="type hackathon">AMAZON WEB SERVICES</span>
-                        <span class="date"><i class="far fa-calendar"></i> May 2026</span>
+                        <span class="ach-org">AMAZON WEB SERVICES</span>
+                        <span class="ach-type certification">Certification</span>
                     </div>
                 </div>
-                <h3>AWS AI Practitioner Challenge</h3>
-                <p> Hands-on experience with AWS AI services, focusing on scalable infrastructure, model lifecycle management, and deploying intelligent solutions</p>
-                <div class="ach-footer">
-                    <span class="highlight-badge"><i class="fas fa-rocket"></i> Asia Pasific University</span>
-                </div>
+                <div class="ach-date"><i class="far fa-calendar"></i> May 2026</div>
             </div>
+            <h3>AWS AI Practitioner Challenge</h3>
+            <p>Hands-on experience with AWS AI services, focusing on scalable infrastructure, model lifecycle management, and deploying intelligent solutions.</p>
+            <div class="ach-footer">
+                <span class="highlight-badge"><i class="fas fa-check-circle"></i> Certified</span>
+                <a href="Files/AWS AI Practitioner Challenge Certification.pdf" class="verify-link">Verify Certificate <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
 
-          <!-- Hackathon -->
-            <div class="achievement-card">
-                <div class="ach-header">
+        <!-- Hackathon -->
+        <div class="achievement-card" data-category="hackathon">
+            <div class="ach-header">
+                <div class="ach-title-group">
                     <div class="ach-icon"><i class="fas fa-trophy"></i></div>
                     <div class="ach-meta">
-                        <span class="type hackathon">Hackathon</span>
-                        <span class="date"><i class="far fa-calendar"></i> Apr 2025</span>
+                        <span class="ach-org">USM & UTAR</span>
+                        <span class="ach-type hackathon">Hackathon</span>
                     </div>
                 </div>
-                <h3>Hack Attack 2025 Participant</h3>
-                <p>Co-developed a Talent Acquisition System under rapid development conditions</p>
-                <div class="ach-footer">
-                    <span class="highlight-badge"><i class="fas fa-rocket"></i> USM & UTAR</span>
-                </div>
+                <div class="ach-date"><i class="far fa-calendar"></i> Apr 2025</div>
             </div>
+            <h3>Hack Attack 2025 Participant</h3>
+            <p>Co-developed a Talent Acquisition System under rapid development conditions.</p>
+            <div class="ach-footer">
+                <span class="highlight-badge"><i class="fas fa-rocket"></i> USM & UTAR</span>
+                <a href="Files/Hack Attack 2025 Project.pdf" class="verify-link">View Project <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
 
-            <!-- Diploma -->
-            <div class="achievement-card">
-                <div class="ach-header">
+        <!-- Diploma -->
+        <div class="achievement-card" data-category="academic">
+            <div class="ach-header">
+                <div class="ach-title-group">
                     <div class="ach-icon"><i class="fas fa-certificate"></i></div>
                     <div class="ach-meta">
-                        <span class="type academic">Academic</span>
-                        <span class="date"><i class="far fa-calendar"></i> Nov 2025</span>
+                        <span class="ach-org">ASIA PACIFIC UNIVERSITY</span>
+                        <span class="ach-type academic">Academic</span>
                     </div>
                 </div>
-                <h3>Diploma High Achiever</h3>
-                <p>Graduated with a Diploma in Information & Communication Technology (Software Engineering) with a stellar CGPA.</p>
-                <div class="ach-footer">
-                    <span class="highlight-badge"><i class="fas fa-star"></i> 3.84 / 4.00 CGPA</span>
-                </div>
+                <div class="ach-date"><i class="far fa-calendar"></i> Nov 2025</div>
             </div>
-
-
+            <h3>Diploma High Achiever</h3>
+            <p>Graduated with a Diploma in Information & Communication Technology (Software Engineering) with a stellar CGPA.</p>
+            <div class="ach-footer">
+                <span class="highlight-badge"><i class="fas fa-star"></i> High Distinction</span>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="section-padding">
