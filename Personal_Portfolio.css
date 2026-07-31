@@ -1403,7 +1403,7 @@ footer {
     }
 
     .project-card {
-      width : 340px;
+        width : 340px;
     }
 
     .project-img-container {
@@ -1451,6 +1451,7 @@ footer {
     
     /* Make achievement cards more compact */
     .achievement-card {
+        width: 340px;
         padding: 1.2rem;
     }
     
