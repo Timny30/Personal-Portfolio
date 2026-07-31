@@ -400,18 +400,6 @@ ul {
     color: var(--text-muted);
 }
 
-.profile-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0.5rem 0;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-.profile-footer i {
-    color: var(--accent-success);
-}
-
 /* Timeline (Experience) */
 .timeline-container {
     position: relative;
