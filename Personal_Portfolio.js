@@ -143,3 +143,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// --- Scroll to Top Floating Button Logic ---
+    const scrollBtn = document.getElementById('scroll-btn');
+    const heroSection = document.getElementById('hero');
+
+    if (scrollBtn && heroSection) {
+        window.addEventListener('scroll', () => {
+            // Get the height of the hero section
+            const heroBottom = heroSection.offsetHeight;
+            
+            // If the user scrolls past 50% of the hero section, show the button
+            if (window.scrollY > (heroBottom / 2)) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+    }
