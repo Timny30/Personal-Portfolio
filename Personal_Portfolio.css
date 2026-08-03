@@ -240,6 +240,10 @@ ul {
     flex: 1.2;
 }
 
+.hero-text p {
+    text-align: justify;
+}
+
 .status-badge {
     display: inline-flex;
     align-items: center;
